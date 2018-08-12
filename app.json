@@ -11,15 +11,23 @@
     },
     "APP_ID": {
       "description": "A unique identifier for your app.",
-      "value": "myAppId"
+      "value": "GiftApp"
     },
     "MASTER_KEY": {
       "description": "A key that overrides all permissions. Keep this secret.",
-      "value": "myMasterKey"
+      "value": ""
     },
     "SERVER_URL": {
       "description": "URL to connect to your Heroku instance (update with your app's name + PARSE_MOUNT)",
-      "value": "http://yourappname.herokuapp.com/parse"
+      "value": "http://fbu-giftapp.herokuapp.com/parse"
+    }
+      "FCM_API_KEY":{
+      "description":"Firebase cloud messaging key",
+      "value":""
+    },
+    "FCM_SENDER_ID":{
+      "description": "Firebase Cloud Messaging sender id",
+      "value":""
     }
   },
   "image": "heroku/nodejs",
