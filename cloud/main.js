@@ -25,3 +25,22 @@ Parse.Cloud.define("pushsample", function (request, response) {
             useMasterKey: true
        });
 });
+
+var query = new Parse.Query(Parse.Installation);
+                   query.equalTo('installationId', parseInstallationId);
+
+                      Parse.Push.send({
+                        where: query, // Set our Installation query
+                        data: {
+                          alert: "Willie Hayes injured by own pop fly." 
+                        }
+                      }, {
+                        success: function() {
+                          // Push was successful
+                          console.log('successful');
+                        },
+                        error: function(error) {
+                          // Handle error
+                          console.log('error');
+                        }
+                });
