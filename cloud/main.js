@@ -1,3 +1,9 @@
+const logger = require('parse-server').logger;
+
+Parse.Cloud.define('hello', function(req, res) {
+    res.success('Hi');
+});
+
 Parse.Cloud.define("pushsample", function (request, response) {
     Parse.Push.send({
             channels: ["News"],
